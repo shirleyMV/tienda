@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: tienda
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: FILESYSTEM_DISK
+        value: public
+      - key: APP_KEY
+        value: base64:u2/s2yyoVxCO1+dnfSG6ldOtXR3jYeQFvl/ERd2MRmA=
